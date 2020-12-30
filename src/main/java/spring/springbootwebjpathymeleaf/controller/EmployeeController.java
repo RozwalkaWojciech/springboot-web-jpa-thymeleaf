@@ -35,7 +35,7 @@ public class EmployeeController {
         return "redirect:/";
     }
 
-    @PostMapping("/showFormForUpdate/{id}")
+    @GetMapping("/showFormForUpdate/{id}")
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
         model.addAttribute("employee", employeeService.getEmployeeById(id));
         return "update_employee";
