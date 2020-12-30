@@ -22,4 +22,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void saveEmployee(Employee employee) {
         employeeRepository.save(employee);
     }
+
+    @Override
+    public Employee getEmployeeById(Long id) {
+        return employeeRepository.findById(id).orElseThrow(RuntimeException::new);
+    }
 }
