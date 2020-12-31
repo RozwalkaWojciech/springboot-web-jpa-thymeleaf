@@ -40,4 +40,9 @@ public class EmployeeController {
         model.addAttribute("employee", employeeService.getEmployeeById(id));
         return "update_employee";
     }
+
+    @GetMapping("/deleteEmployee/{id}")
+    public String deleteEmployee(@PathVariable(value = "id") long id) {
+
+    }
 }
