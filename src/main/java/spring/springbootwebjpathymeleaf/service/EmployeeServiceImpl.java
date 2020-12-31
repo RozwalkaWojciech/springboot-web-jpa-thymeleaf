@@ -27,4 +27,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee getEmployeeById(Long id) {
         return employeeRepository.findById(id).orElseThrow(RuntimeException::new);
     }
+
+    @Override
+    public void deleteEmployeeById(Long id) {
+        employeeRepository.deleteById(id);
+    }
 }
