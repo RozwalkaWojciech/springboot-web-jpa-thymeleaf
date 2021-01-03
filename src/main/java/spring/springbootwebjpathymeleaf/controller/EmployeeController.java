@@ -1,5 +1,6 @@
 package spring.springbootwebjpathymeleaf.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,13 +11,10 @@ import spring.springbootwebjpathymeleaf.service.EmployeeService;
 import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class EmployeeController {
 
     private final EmployeeService employeeService;
-
-    public EmployeeController(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
 
     @GetMapping("/")
     public String viewHomePage(Model model) {
