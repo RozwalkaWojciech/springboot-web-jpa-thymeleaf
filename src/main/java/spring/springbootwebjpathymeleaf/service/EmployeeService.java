@@ -1,5 +1,6 @@
 package spring.springbootwebjpathymeleaf.service;
 
+import org.springframework.data.domain.Page;
 import spring.springbootwebjpathymeleaf.model.Employee;
 
 import java.util.List;
@@ -13,4 +14,6 @@ public interface EmployeeService {
     Employee getEmployeeById(Long id);
 
     void deleteEmployeeById(Long id);
+
+    Page<Employee> findPaginated(int pageNo, int pageSize);
 }
